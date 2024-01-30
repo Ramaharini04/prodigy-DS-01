@@ -1,0 +1,27 @@
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+df=pd.read_csv("/content/API_SP.POP.TOTAL_DS2_en_csv_v2_6298256.csv")
+
+
+# Data from Response 0
+countries = ["China", "India", "United States", "Indonesia", "Pakistan", "Brazil", "Nigeria", "Bangladesh", "Russia", "Japan"]
+populations = [1439323776, 1380004385, 332944292, 273523312, 231234567, 212555504, 206140093, 164669744, 145934462, 125803000]
+
+# Create a bar chart
+plt.bar(countries, populations)
+
+# Customize the chart
+plt.xlabel("Countries")
+plt.ylabel("Population (Millions)")
+plt.title("Population of the Top 10 Most Populous Countries in 2023")
+plt.xticks(rotation=45, ha="right")  # Rotate country labels for better readability
+
+# Show the chart
+plt.tight_layout()
+plt.show()
+
+
